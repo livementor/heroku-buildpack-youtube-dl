@@ -1,10 +1,11 @@
 #!/bin/sh
 
-# intstall youtube-dl
-env_dir=$3
+echo "Installing youtube-dl in "$1"/scripts"
 
-mkdir -p foo $env_dir/scripts
+mkdir -p foo $1/scripts
 
-curl -L https://yt-dl.org/downloads/latest/youtube-dl -o $env_dir/scripts/youtube-dl
-chmod a+rx $env_dir/scripts/youtube-dl
-PATH=$PATH:$env_dir/scripts/
+curl -L https://yt-dl.org/downloads/latest/youtube-dl -o $1/scripts/youtube-dl
+
+chmod a+rx $1/scripts/youtube-dl
+
+PATH=$PATH:$1/scripts/
