@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Only use buildpack if youtube-dl is not installed yet
+if command -v youtube-dl >/dev/null 2>&1; then
+  exit 1
+else
+  echo "youtube-dl"
+  exit 0
+fi
